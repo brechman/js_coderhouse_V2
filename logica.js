@@ -204,6 +204,7 @@ function mostrarCarrito() {
 
     // Manejar clic en el botón "Vaciar Carrito"
     vaciarBtn.click(function() {
+        mostrarMensaje('¡El carrito fue limpiado! Agregue nuevos productos.');
         carrito = []; // Vaciar el carrito
         localStorage.removeItem('carrito'); // Eliminar el carrito de localStorage
         mostrarCarrito(); // Actualizar la visualización del carrito
