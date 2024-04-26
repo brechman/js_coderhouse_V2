@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "nombre": "Laptop HP Pavilion",
+        "precio": 799.99,
+        "descripcion": "Potente laptop HP con pantalla Full HD.",
+        "imagen": "https://home.ripley.com.pe/Attachment/WOP_5/2004324244308/2004324244308_2.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Smartphone Samsung Galaxy S21",
+        "precio": 999.99,
+        "descripcion": "Último modelo de smartphone Samsung con cámara de alta resolución.",
+        "imagen": "https://ripleype.imgix.net/https%3A%2F%2Fmedia-prod-use-1.mirakl.net%2FSOURCE%2F7df45eb98dec441b8b1df96df5788b63?w=750&h=555&ch=Width&auto=format&cs=strip&bg=FFFFFF&q=60&trimcolor=FFFFFF&trim=color&fit=fillmax&ixlib=js-1.1.0&s=8f2ef8478ea62615f18c08db3ef3785a"
+    },
+    {
+        "id": 3,
+        "nombre": "Tablet Apple iPad Pro",
+        "precio": 1099.99,
+        "descripcion": "Tablet iPad Pro con pantalla Retina y soporte para Apple Pencil.",
+        "imagen": "https://home.ripley.com.pe/Attachment/WOP_5/2004319125735/2004319125735_2.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Monitor Gaming ASUS",
+        "precio": 499.99,
+        "descripcion": "Monitor ASUS diseñado para gaming con alta tasa de refresco.",
+        "imagen": "https://ripleype.imgix.net/https%3A%2F%2Fmedia-prod-use-1.mirakl.net%2FSOURCE%2F97374ade257244c89915fdb5bc4a34da?w=750&h=555&ch=Width&auto=format&cs=strip&bg=FFFFFF&q=60&trimcolor=FFFFFF&trim=color&fit=fillmax&ixlib=js-1.1.0&s=133d70868bf7b1300d6f831e272d5e80"
+    },
+    {
+        "id": 5,
+        "nombre": "Cámara Mirrorless Sony Alpha",
+        "precio": 1299.99,
+        "descripcion": "Cámara Sony Alpha de formato compacto ideal para fotografía profesional.",
+        "imagen": "https://m.media-amazon.com/images/I/71vpzW1nQJL.__AC_SY300_SX300_QL70_FMwebp_.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Impresora Multifuncional Epson",
+        "precio": 299.99,
+        "descripcion": "Impresora Epson multifuncional para oficina y hogar.",
+        "imagen": "https://m.media-amazon.com/images/I/51Ha1XOmAfL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Auriculares Bluetooth Bose",
+        "precio": 249.99,
+        "descripcion": "Auriculares inalámbricos Bose con cancelación de ruido.",
+        "imagen": "https://m.media-amazon.com/images/I/51EwBP9U2YL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Teclado Mecánico Razer",
+        "precio": 129.99,
+        "descripcion": "Teclado mecánico Razer diseñado para gaming.",
+        "imagen": "https://m.media-amazon.com/images/I/71QWknggtzL.__AC_SY300_SX300_QL70_FMwebp_.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Disco Duro Externo WD",
+        "precio": 149.99,
+        "descripcion": "Disco duro externo Western Digital de alta capacidad.",
+        "imagen": "https://m.media-amazon.com/images/I/510+J06fz0L._AC_SY300_SX300_.jpg"
+    }
+]

@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+}
+
+.producto {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.producto h3 {
+    margin-top: 0;
+}
+
+.producto p {
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-weight: bold;
+    color: #007bff;
+}
+.card-img-top {
+    width: 100%; /* Fills the container width */
+    height: 150px; /* Fixed height in pixels */
+    object-fit: scale-down; /* Covers the container */
+  }
+  
+  .card-body {
+    padding: 10px; /* Adds padding around the image */
+  }
