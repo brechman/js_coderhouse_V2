@@ -4,8 +4,29 @@ $(document).ready(function() {
     const totalElement = $('#total');
     const finalizarBtn = $('#finalizarBtn');
     const vaciarBtn = $('#vaciarBtn');
+    const menuDesplegable = $('#menu-desplegable');
+    const botonFlotante = $('#boton-flotante');   
+    const overlay = $('.overlay');
+
     let carrito = [];
 
+   
+    
+
+    // Mostrar el carrito y el overlay al hacer clic en el botón flotante
+    botonFlotante.click(function() {
+        menuDesplegable.toggleClass('oculto');
+        overlay.toggle(); 
+    });
+
+    // Ocultar el carrito y el overlay al hacer clic en el botón "Seguir comprando"
+    $('#cerrar-carrito').click(function() {
+        menuDesplegable.removeClass('oculto');
+        overlay.hide(); 
+    });
+
+   
+ 
     // Cargar productos desde productos.json al cargar la página
     $.getJSON('productos.json', function(data) {
    
@@ -87,6 +108,7 @@ function agregarAlCarro(producto) {
       
             // Mostrar mensaje de confirmación
             Swal.fire('Agregado!', `${producto.nombre} ha sido agregado al carro.`, 'success');
+           
         }
     }).then((result) => {
         if (result.isConfirmed) {
@@ -101,17 +123,16 @@ function mostrarCarrito() {
     tablaBody.empty(); 
 
     let total = 0;
-
+    let cantidadTotal = 0;
+     
     // Recorrer el carrito y agregar productos a la tabla
     carrito.forEach(function(producto) {
         const subtotal = producto.precio * producto.cantidad;
         total += subtotal;
-
+        cantidadTotal += parseInt(producto.cantidad);
         const filaHTML = `
             <tr>
-                <td>${producto.id}</td>
                 <td>${producto.nombre}</td>
-                <td>${producto.descripcion}</td>
                 <td>$${producto.precio.toFixed(2)}</td>
                 <td>
                     <div class="input-group">
@@ -131,6 +152,7 @@ function mostrarCarrito() {
 
     // Actualizar el total a pagar
     totalElement.text(`Total a pagar: $${total.toFixed(2)}`);
+    $('#cantidad-carrito').text(cantidadTotal);
 
     // Manejar cambios en la cantidad de productos
     $('.cantidad-input').change(function() {
@@ -157,6 +179,7 @@ function mostrarCarrito() {
         carrito[index].cantidad = newQuantity;
         localStorage.setItem('carrito', JSON.stringify(carrito));
         mostrarCarrito();
+       
     });
 
     $('.decrementar-btn').click(function() {
@@ -166,6 +189,7 @@ function mostrarCarrito() {
         carrito[index].cantidad = newQuantity;
         localStorage.setItem('carrito', JSON.stringify(carrito));
         mostrarCarrito();
+        
     });
 
     // Manejar clic en el botón "Eliminar" dentro del carrito
@@ -195,6 +219,7 @@ function mostrarCarrito() {
                   confirmButtonColor: '#32CD32'
                 }).then(() => {
                   mostrarCarrito(); // Actualizar la visualización del carrito
+                 
                 });
               }
             });
@@ -208,6 +233,7 @@ function mostrarCarrito() {
         carrito = []; // Vaciar el carrito
         localStorage.removeItem('carrito'); // Eliminar el carrito de localStorage
         mostrarCarrito(); // Actualizar la visualización del carrito
+       
     });
 
     // Manejar clic en el botón "Finalizar Compra"
@@ -215,7 +241,7 @@ function mostrarCarrito() {
         mostrarMensaje('¡Compra finalizada! Gracias por su compra.');
         carrito = []; // Vaciar el carrito después de la compra
         localStorage.removeItem('carrito'); // Eliminar el carrito de localStorage
-        mostrarCarrito(); // Actualizar la visualización del carrito
+        mostrarCarrito(); // Actualizar la visualización del carrito        
     });
 
     // Cargar el carrito desde localStorage al cargar la página

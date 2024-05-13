@@ -41,3 +41,61 @@ header nav a {
   .card-body {
     padding: 10px; 
   }
+
+  #boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+#cantidad-carrito {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.menu-desplegable {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    transform: translateX(100%);
+    }
+
+#cerrar-carrito {
+    position: absolute; /* Posiciona el botón de forma absoluta */
+    bottom: 0; /* Lo coloca al final del contenedor */
+    left: 0; /* Lo coloca al inicio del contenedor */
+    width: 100%; /* Hace que el botón ocupe todo el ancho del contenedor */
+}
+
+.oculto {
+    transform: translateX(0);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Asegura que la capa esté por encima del contenido */
+    display: none; /* Comenzará oculto */
+}
+
+
+.overlay.mostrar {
+    display: block;
+}

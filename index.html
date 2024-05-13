@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Sumaq Software</title>
+
+    <link rel="icon" href="img/tienda-online.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/tienda-online.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,32 +19,49 @@
     </header>
 
     <main class="container my-4">
+        <div class="overlay"></div>
         <div id="lista-productos" class="row"></div>
 
-        <section id="carrito-section" class="mt-5">
-          <h4>Tu carrito:</h4>
-          <table class="table table-striped">
-              <thead>
-                  <tr>
-                      <th>ID</th>
-                      <th>Nombre</th>
-                      <th>Descripción</th>
-                      <th>Precio</th>
-                      <th>Cantidad</th>
-                      <th>Total</th>
-                      <th></th>
-                  </tr>
-              </thead>
-              <tbody id="tablabody">
-                  <!-- aquí se mostrarán los productos del carrito -->
-              </tbody>
-          </table>
-          <div class="d-flex justify-content-between align-items-center">
-              <h4 id="total">Total a pagar: $0.00</h4>
-              <button class="btn btn-danger" id="vaciarBtn">Vaciar Carrito</button>
-              <button class="btn btn-primary" id="finalizarBtn">Finalizar Compra</button>
-          </div>
-      </section>
+        <button id="boton-flotante" class="btn btn-primary">
+            <img src="img/carrito.png" alt="Carrito">
+            <span id="cantidad-carrito" class="badge badge-pill badge-danger">0</span>
+        </button>
+        <div id="menu-desplegable" class="menu-desplegable">
+       
+                <section id="carrito-section" class="mt-5">
+                    <h4>Tu carrito:</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <!-- <th>ID</th> -->
+                                <!-- <th>Nombre</th> -->
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablabody">
+                            <!-- aquí se mostrarán los productos del carrito -->
+                        </tbody>
+                    </table>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 id="total">Total a pagar: $0.00</h4>
+                        </div>
+                        <div class="col-md-12">
+                            <button class="btn btn-danger btn-block" id="vaciarBtn">Vaciar Carrito</button>
+                        </div>
+                        <div class="col-md-12">
+                            <button class="btn btn-primary btn-block" id="finalizarBtn">Finalizar Compra</button>
+                        </div>
+                    </div>
+                </section>           
+            <button id="cerrar-carrito" class="btn btn-dark btn-block">Seguir comprando</button>
+        </div>
+
+ 
       <div class="modal fade" id="confirmacionModal" tabindex="-1" role="dialog" aria-labelledby="confirmacionModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
